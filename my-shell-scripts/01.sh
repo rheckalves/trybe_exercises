@@ -1,1 +1,2 @@
-#!/bin/bash<<<<<<< shell-script-updates
+#!/bin/bash
+#Vou ter muito sucesso na programação!
