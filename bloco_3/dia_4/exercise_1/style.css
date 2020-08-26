@@ -5,6 +5,10 @@ body {
 a {
     text-decoration: none;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #140c29
+}
 .title-container {
     background-color: yellowgreen;
     height: 100px;
@@ -39,12 +43,78 @@ nav li a:hover {
 }
 
 td {
-    vertical-align: top;
     text-align: center;
 }
 
 table {
     margin: 0 auto; 
-    text-align: left; 
-    vertical-align: top;
+    text-align: left;
+    background-color: rgb(35, 102, 102);
+    padding: 30px 10px;
+    border-radius: 15px;
+}
+
+.sidefloat-content {
+    position: relative;
+    top: 200px;
+    right: 15px;
+    width: 30%;
+    float: right;
+    text-align: center;
+}
+
+.img-left-float {
+    width: 250px;
+    float: left;
+    margin: 0 15px 10px 15px;
+}
+
+.article-section {
+    margin: 60px 0 10px 10px;
+    min-height: 250px;
+}
+
+.article-section-left{
+    width: 70%;
+}
+
+.articles {
+    display: inline-block
+}
+
+.button {
+    margin: auto;
+    width: 270px;
+    height: 35px;
+    padding-top: 5px;
+    background-color: rgb(0, 128, 6);
+    border-radius: 8px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    margin-top: 8px;
+    transition: background-color 400ms;
+  }
+
+.button:hover {
+    background-color: yellowgreen;
+    color: rgb(9, 26, 26);
+}
+
+.button a:visited {
+      color: inherit;
+  }
+
+.bibliography-section {
+    margin-top: 80px;
+    background-color: lightgreen;
+    border-radius: 8px;
+}
+footer {
+    margin-top: 80px;
+    text-align: center;
+    color: rgb(46, 0, 0);
+    font-size: 14px;
 }
