@@ -75,14 +75,15 @@
         let imgSmallImage = document.createElement('img');
         imgSmallImage.src = "https://picsum.photos/200";
         let olDivRightContent = document.createElement('ol');
-        olDivRightContent.innerHTML = "<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>"
-        let h3OneMainContent = document.createElement('h3');
-        h3OneMainContent.className = "description";
-        let h3TwoMainContent = document.createElement('h3');
-        h3TwoMainContent.className = "description";
-        let h3ThreeMainContent = document.createElement('h3');
-        h3ThreeMainContent.className = "description";
-        
+        const liText = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+        divRightContent.appendChild(olDivRightContent);
+        for (let item in liText) {
+          const elementLi = document.createElement('li');
+          elementLi.innerText = liText[item];
+          olDivRightContent.appendChild(elementLi);
+        }
+       
+
 
 
         document.querySelector('body').appendChild(h1);
@@ -92,10 +93,13 @@
         document.querySelector('div.main-content').appendChild(divLeftContent);
         document.querySelector('div.main-content').appendChild(divRightContent);
         document.querySelector('div.left-content').appendChild(imgSmallImage);
-        document.querySelector('div.right-content').appendChild(olDivRightContent);
-        document.querySelector('div.main-content').appendChild(h3OneMainContent);
-        document.querySelector('div.main-content').appendChild(h3TwoMainContent);
-        document.querySelector('div.main-content').appendChild(h3ThreeMainContent);
+        
+        for (let i = 0; i < 3; i += 1){
+          let h3MainContent = document.createElement('h3');
+          h3MainContent.className = "main-content";
+          document.querySelector("div.main-content").appendChild(h3MainContent);
+        }
+        
         let liOlDivRightContent = document.querySelector("div.right-content ol");
         liOlDivRightContent.lastElementChild.remove();
         liOlDivRightContent.childNodes[8].remove();
