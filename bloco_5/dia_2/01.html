@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        let h1 = document.createElement('h1');
+        h1.innerText = 'Exercício 5.2 - JavaScript DOM';
+        let divMainContent = document.createElement('div');
+        divMainContent.className = "main-content";
+        let divCenterContent = document.createElement('div');
+        divCenterContent.className = "center-content";
+        let p = document.createElement('p');
+        p.innerText = "alguma coisa."
+        let divLeftContent = document.createElement('div');
+        divLeftContent.className = "left-content";
+        let divRightContent = document.createElement('div');
+        divRightContent.className = "right-content";
+        let imgSmallImage = document.createElement('img');
+        imgSmallImage.src = "https://picsum.photos/200";
+        let olDivRightContent = document.createElement('ol');
+        olDivRightContent.innerHTML = "<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>"
+        let h3OneMainContent = document.createElement('h3');
+        let h3TwoMainContent = document.createElement('h3');
+        let h3ThreeMainContent = document.createElement('h3');
+
+
+        document.querySelector('body').appendChild(h1);
+        document.querySelector('body').appendChild(divMainContent);
+        document.querySelector('div.main-content').appendChild(divCenterContent);
+        document.querySelector('div.center-content').appendChild(p);
+        document.querySelector('div.main-content').appendChild(divLeftContent);
+        document.querySelector('div.main-content').appendChild(divRightContent);
+        document.querySelector('div.left-content').appendChild(imgSmallImage);
+        document.querySelector('div.right-content').appendChild(olDivRightContent);
+        document.querySelector('div.main-content').appendChild(h3OneMainContent);
+        document.querySelector('div.main-content').appendChild(h3TwoMainContent);
+        document.querySelector('div.main-content').appendChild(h3ThreeMainContent);
+
+    </script>
+  </body>
+</html>
