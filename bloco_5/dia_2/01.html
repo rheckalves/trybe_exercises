@@ -59,23 +59,30 @@
     <script>
         let h1 = document.createElement('h1');
         h1.innerText = 'Exercício 5.2 - JavaScript DOM';
+        h1.className = "title";
         let divMainContent = document.createElement('div');
         divMainContent.className = "main-content";
         let divCenterContent = document.createElement('div');
         divCenterContent.className = "center-content";
+        divCenterContent.style = "background-color: green"
         let p = document.createElement('p');
         p.innerText = "alguma coisa."
         let divLeftContent = document.createElement('div');
         divLeftContent.className = "left-content";
         let divRightContent = document.createElement('div');
         divRightContent.className = "right-content";
+        divRightContent.style = "margin: auto"
         let imgSmallImage = document.createElement('img');
         imgSmallImage.src = "https://picsum.photos/200";
         let olDivRightContent = document.createElement('ol');
         olDivRightContent.innerHTML = "<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>"
         let h3OneMainContent = document.createElement('h3');
+        h3OneMainContent.className = "description";
         let h3TwoMainContent = document.createElement('h3');
+        h3TwoMainContent.className = "description";
         let h3ThreeMainContent = document.createElement('h3');
+        h3ThreeMainContent.className = "description";
+        
 
 
         document.querySelector('body').appendChild(h1);
@@ -89,6 +96,11 @@
         document.querySelector('div.main-content').appendChild(h3OneMainContent);
         document.querySelector('div.main-content').appendChild(h3TwoMainContent);
         document.querySelector('div.main-content').appendChild(h3ThreeMainContent);
+        let liOlDivRightContent = document.querySelector("div.right-content ol");
+        liOlDivRightContent.lastElementChild.remove();
+        liOlDivRightContent.childNodes[8].remove();
+        console.log(liOlDivRightContent.childNodes)
+        
 
     </script>
   </body>
