@@ -1,41 +1,143 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset=utf-8 />
-<title>Calculator</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <label
+      >Square this number:
+      <input type="number" id="square-input" size="2" />
+    </label>
+    <button id="square-button">Calculate</button>
+    <br /><br />
 
-  <label>Square this number:
-    <input type="number" id="square-input" size="2">
-  </label>
-  <button id="square-button">Calculate</button>
-  <br><br>
-  
-  <label>Half this number:
-    <input type="number" id="half-input" size="2">
-  </label>
-  <button id="half-button">Calculate</button>
-  <br><br>
-  
-  <label>
-    Fraction:
-    <input type="number" id="percent1-input" size="2">
-  </label>
-  <label>
-    Whole:
-    <input type="number" id="percent2-input" size="2">
-  </label>
-  <button id="percent-button">Calculate</button>
-  <br><br>
-  
-  <label>Calculate area of circle with radius:
-    <input type="number" id="area-input" size="2">
-  </label>
-  <button id="area-button">Calculate</button> 
-  <br><br>
-  <div id="solution"></div>
+    <label
+      >Half this number:
+      <input type="number" id="half-input" size="2" />
+    </label>
+    <button id="half-button">Calculate</button>
+    <br /><br />
 
-  
-</body>
+    <label>
+      Fraction:
+      <input type="number" id="percent1-input" size="2" />
+    </label>
+    <label>
+      Whole:
+      <input type="number" id="percent2-input" size="2" />
+    </label>
+    <button id="percent-button">Calculate</button>
+    <br /><br />
+
+    <label
+      >Calculate area of circle with radius:
+      <input type="number" id="area-input" size="2" />
+    </label>
+    <button id="area-button">Calculate</button>
+    <br /><br />
+    <div id="solution"></div>
+
+    <script>
+      function squareNumber(num) {
+        var squaredNumber = num * num;
+        console.log(
+          "The result of squaring the number " + num + " is " + squaredNumber
+        );
+        return squaredNumber;
+      }
+
+      function halfOf(num) {
+        var half = num / 2;
+        console.log("Half of " + num + " is " + half);
+        return half;
+      }
+
+      function percentOf(num1, num2) {
+        var percent = (num1 / num2) * 100;
+        console.log(num1 + " is " + percent + "% of " + num2);
+        return percent;
+      }
+
+      function areaOfCircle(radius) {
+        var area = Math.PI * squareNumber(radius);
+        console.log("The area of circle with radius " + radius + " is " + area);
+        return area;
+      }
+
+      const divSolution = document.querySelector("#solution");
+
+      const square = () => {
+        let input = document.querySelector("#square-input");
+        divSolution.innerHTML = "";
+        divSolution.innerHTML = squareNumber(input.value);
+      };
+
+      const half = () => {
+        let input = document.querySelector("#half-input");
+        divSolution.innerHTML = "";
+        divSolution.innerHTML = halfOf(input.value);
+      };
+
+      const percent = () => {
+        let input1 = document.querySelector("#percent1-input");
+        let input2 = document.querySelector("#percent2-input");
+        divSolution.innerHTML = "";
+        divSolution.innerHTML = percentOf(input1.value, input2.value);
+      };
+
+      const circleArea = () => {
+        let input = document.querySelector("#area-input");
+        divSolution.innerHTML = "";
+        divSolution.innerHTML = areaOfCircle(input.value);
+      };
+
+      const btnSquare = document.querySelector("#square-button");
+      btnSquare.addEventListener("click", square);
+      let inputSquare = document.querySelector("#square-input");
+      inputSquare.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+          event.preventDefault();
+          btnSquare.click();
+        }
+      });
+
+      const btnHalf = document.querySelector("#half-button");
+      btnHalf.addEventListener("click", half);
+      let inputHalfOf = document.querySelector("#half-input");
+      inputHalfOf.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+          event.preventDefault();
+          btnHalf.click();
+        }
+      });
+
+      const btnPercent = document.querySelector("#percent-button");
+      btnPercent.addEventListener("click", percent);
+      let inputPercentOf1 = document.querySelector("#percent1-input");
+      let inputPercentOf2 = document.querySelector("#percent2-input");
+      inputPercentOf1.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+          event.preventDefault();
+          btnPercent.click();
+        }
+      });
+      inputPercentOf2.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+          event.preventDefault();
+          btnPercent.click();
+        }
+      });
+
+      const btnCircleArea = document.querySelector("#area-button");
+      btnCircleArea.addEventListener("click", circleArea);
+      let inputCircleArea = document.querySelector("#area-input");
+      inputCircleArea.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+          event.preventDefault();
+          btnCircleArea.click();
+        }
+      });
+    </script>
+  </body>
 </html>
