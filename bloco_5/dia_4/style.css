@@ -1,0 +1,10 @@
+body {
+    background-color: bisque;
+}
+
+p {
+    color: rgb(53, 0, 0);
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 20px;
+}
