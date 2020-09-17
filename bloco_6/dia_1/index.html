@@ -10,9 +10,28 @@
       <header class="header">
         <h1>Exercises 6.1 - HTML Forms</h1>
       </header>
+      <form action="" method="GET" class="cv-form">
+          <div class="form-row">
       <div class='line-content'>
-        
+        <fieldset class="legacy-form-row">
+            <legend>Dados pessoais:</legend>
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name" maxlength="40" required>
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" maxlength="50" required>
+            <label for="cpf">CPF:</label>
+            <input type="text" name="cpf" id="cpf" maxlength="11" required>
+            <label for="endereco">Endereço:</label>
+            <input type="text" name="endereco" id="endereco" maxlength="200" required>
+            <label for="cidade">Cidade:</label>
+            <input type="text" name="cidade" id="cidade" maxlength="28" required>
+            <label for="estado">Estado:</label>
+            <select name="estado" id="estado" required>
+            </select>
+        </fieldset>
       </div>
+      </div>
+      </form>
   </body>
   <script src="./script.js"></script>
 </html>
