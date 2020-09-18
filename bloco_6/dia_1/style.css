@@ -19,7 +19,7 @@
     border-radius: 3px;
     width: 80%;
     margin: 40px 0;
-    padding: 50px;
+    padding: 30px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -29,15 +29,15 @@
     border: 1px solid rgb(214, 217, 220);
     border-radius: 8px;
     width: 80%;
-    padding: 50px;
+    padding: 15px;
     margin: 0 auto 40px auto;
   }
 
   .form-row {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   
-  input[type = "text"] {
+  input[type = "text"], textarea {
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(214, 217, 220);
     border-radius: 3px;
@@ -51,7 +51,7 @@
   }
   
   .line-content {
-    margin: 20px;
+    margin: 10px;
   }
   
   .legacy-form-row {
