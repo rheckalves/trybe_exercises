@@ -15,12 +15,13 @@ function myRemove(arr, item) {
 let arr = [1, 2, 4];
 let expected = myRemove([1, 2, 3, 4], 3);
 
-assert.deepStrictEqual(expected, arr, '[1, 2, 4] expeced.');
+assert.deepStrictEqual(expected, arr, '[1, 2, 4] expected.');
 
 arr = [1, 2, 3, 4];
 assert.notDeepStrictEqual(expected, arr, '[1, 2, 3, 4] not expeced.');
 
-assert.notDeepStrictEqual(expected, arr, 'array not modifyied.');
+myRemove(arr, 1);
+assert.strictEqual(arr.length, 4);
 
 expected = myRemove([1, 2, 3, 4], 5);
 
