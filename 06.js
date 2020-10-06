@@ -66,7 +66,7 @@ const books = [
 const expected_result = true
 
 function someBookWasReleaseOnThe80s() {
-  // escreva seu código aqui
+    return books.some(book => book.releaseYear > 1979 && book.releaseYear < 1990);
 }
 
-assert.strictEequal(someBookWasReleaseOnThe80s(), expected_result);
+assert.strictEqual(someBookWasReleaseOnThe80s(), expected_result);
