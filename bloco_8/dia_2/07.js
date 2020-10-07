@@ -66,7 +66,10 @@ const books = [
 const expected_result = 'O Senhor dos Anéis';
 
 function authorWith3DotsOnName() {
-  // escreva seu código aqui
+  const authorNames = books.map(book => book.author.name);
+  const haveThreeInitials = authorNames.find(name => name.match(/([A-Z]\.\s){3}/));
+  const bookWichAuthorNameBeginsWithThreeInitials = books.find(book => book.author.name === haveThreeInitials);
+  return bookWichAuthorNameBeginsWithThreeInitials.name;
 }
 
 assert.deepEqual(authorWith3DotsOnName(), expected_result);

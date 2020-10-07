@@ -7,7 +7,7 @@ const books = [
     genre: 'Fantasia',
     author: {
       name: 'George R. R. Martin',
-      birthYear: 1948
+      birthYear: 1948,
     },
     releaseYear: 1991,
   },
@@ -47,7 +47,7 @@ const books = [
     genre: 'Terror',
     author: {
       name: 'Stephen King',
-      birthYear: 1947
+      birthYear: 1947,
     },
     releaseYear: 1986,
   },
@@ -67,11 +67,15 @@ const expected_result = [
   'Frank Herbert',
   'George R. R. Martin',
   'Isaac Asimov',
-  'J. R. R. Tolkien'
-]
+  'J. R. R. Tolkien',
+];
 
 function fantasyOrScienceFictionAuthors() {
-  // escreva seu código aqui
+  const booksByGenreFantasyOrScienceFiction = books.filter(
+    (book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica'
+  );
+  const authors = booksByGenreFantasyOrScienceFiction.map((book) => book.author.name);
+  return authors.sort();
 }
 
 assert.deepEqual(fantasyOrScienceFictionAuthors(), expected_result);
