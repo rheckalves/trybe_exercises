@@ -10,7 +10,7 @@ const names = [
 
 
 function containsA() {
-  // escreva seu código aqui
+
 }
 
 assert.deepEqual(containsA(), 20);
