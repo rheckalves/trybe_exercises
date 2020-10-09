@@ -19,6 +19,11 @@ const ships = [
 
 // escreva shipLength abaixo
 
+const shipLength = (ship) => {
+    const { name, length, measurementUnit = 'meters' } = ship;
+    return `${name} is ${length} ${measurementUnit} long`;
+}
+
 assert.equal(shipLength(ships[0]), "Titanic is 269.1 meters long")
 assert.equal(shipLength(ships[1]), "Queen Mary 2 is 1132 feet long")
 assert.equal(shipLength(ships[2]), "Yamato is 256 meters long")
