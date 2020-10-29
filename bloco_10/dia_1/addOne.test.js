@@ -10,5 +10,5 @@ describe('The addOne function must sum 1 in all array values without change orig
     });
     it('should be a function', () => {
         expect(typeof addOne).toBe('function');
-    })
+    });
 });
