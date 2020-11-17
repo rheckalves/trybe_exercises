@@ -1,0 +1,13 @@
+fieldset {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+label {
+    magin: 8px;
+}
+
+input {
+    margin: 5px;
+}
